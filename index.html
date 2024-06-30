@@ -11,6 +11,51 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+
+			.post {
+				display: flex;
+				align-items: flex-start;
+				flex-direction: row;
+				flex-wrap: wrap;
+				gap: 20px;
+        	}
+
+			#selfie-image {
+				max-width: 600px; /* Adjust the size as needed */
+				width: 100%;
+				margin-right: 20px;
+				flex-shrink: 0;
+			}
+			
+			.post .major {
+				max-width: 600px; /* Adjust the size as needed */
+				flex: 1;
+			}
+
+			.post .major p {
+				font-size: 16px; /* Adjust the font size as needed */
+				line-height: 1.6; /* Adjust the line height as needed */
+				margin: 0;
+			}
+
+			@media (max-width: 1150px) {
+				
+				.post {
+					flex-direction: column;
+					align-items: center;
+				}
+
+				#selfie-image {
+					margin-right: 0;
+					margin-bottom: 20px;
+				}
+
+				.post .major {
+					text-align: center;
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -27,13 +72,18 @@
 					<div id="main">
 
 						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<h2><a>My name is Pranay Pentaparthy</a></h2>
-									<p>I'm a passionate developer but more importantly I'm passionate about technology.</p>
-								</header>
-								<a class="image fit"><img src="images/2019_selfie.jpg" alt="" /></a>
-							</article>
+						<article class="post featured">
+							<a class="image fit" id="selfie-image"><img src="images/Vancouver_2023_Selfie.jpg" alt="Self-image" /></a>
+							<header class="major">
+								<p>Hi, I’m Pranay Pentaparthy and I work as an incident response team associate at Jackson National Life Insurance. 
+									During my studies at Michigan State University, I took every opportunity to develop as a data analyst and a person 
+									through projects I worked outside of class, attending volunteer events through MSU’s Sparta Sierra Club, and helping 
+									Visteon, a global automotive electronics supplier company, cutting down manual audit review of IT teams there by more 
+									than 40%, and improvising project delivery for more than six teams. Considering my past experience, I believe that my 
+									ability to learn new things quickly, lead a group of more than four people, and adapt to change will make me a great 
+									asset to your company and the mission it strives to achieve.</p>
+							</header>
+						</article>
 
 						<!-- Posts -->
 							<section class="posts">
@@ -41,7 +91,8 @@
 									<header>
 										<h2><a>Weather App<br /></a></h2>
 									</header>
-									<a class="image fit"><img src="images/Weather_app_screenshot.png" alt="weather_app" /></a>
+									<a class="image fit" href="https://github.com/Pranaybot/Weather_app">
+										<img src="images/Weather_app_screenshot.png" alt="weather_app" /></a>
 									<ul>
 										<li>Built application tool using the tkinter graphical user interface library from Python</li>
 										<li>Utilized OpenWeather API to collect data about the temperature, wind, pressure, humidity, and general description of a given city </li>
@@ -51,7 +102,8 @@
 									<header>
 										<h2><a>Voice Assistant<br /></a></h2>
 									</header>
-									<a class="image fit"><img src="images/Voice_Assistant_screenshot.png" alt="voice_assistant" /></a>
+									<a class="image fit" href="https://github.com/Pranaybot/Voice_Assistant">
+										<img src="images/Voice_Assistant_screenshot.png" alt="voice_assistant" /></a>
 									<ul>
 										<li>Implemented OpenWeather and WolfRamAlpha APIs to receive information about weather and general questions</li>
 										<li>Crafted assistant voice with pyttsx3 and invocated SpeechRecognition and gTTS libraries to handle speech and text conversion</li>
@@ -61,7 +113,8 @@
 									<header>
 										<h2><a>Rental Management system<br /></a></h2>
 									</header>
-									<a class="image fit"><img src="images/Rental_management_screenshot.png" alt="rental_management" /></a>
+									<a class="image fit" href="https://github.com/Pranaybot/Rental_properties">
+										<img src="images/Rental_management_screenshot.png" alt="rental_management" /></a>
 									<ul>
 										<li>Utilized Flask to present information about father's tenants in HTML tables </li>
 										<li>Stored property, tenant, and payment information with the help of PostgreSQL and Python</li>
@@ -70,12 +123,17 @@
 								</article>
 								<article>
 									<header>
-										<h2><a>Bar Push App<br /></a></h2>
+										<h2><a>Newgen Flight booking system<br /></a></h2>
 									</header>
-									<a class="image fit"><img src="Bar_push_app_screenshot.png" alt="bar_push_app" /></a>
+									<a class="image fit" href="https://github.com/Pranaybot/capstone-one-project">
+										<img src="images/Newgen_flight_booking_system.png" alt="bar_push_app" /></a>
 									<ul>
-										<li>Utilized Flutter with Firebase database to store user preferences for East Lansing bars</li>
-										<li>Allows user to choose between East Lansing bars based on current capacity and special events</li>
+										<li>Connected Flask app to SerpAPI Google Flights API to allow users to book nonstop
+											one-way and round trip flights.
+										</li>
+										<li>Attached Botpress chatbot in application to answer questions about content of website, such as
+											the signup and login process, and the goal of web application.
+										</li>
 									</ul>
 								</article>
 							</section>
@@ -94,7 +152,7 @@
 							<section>
 								<h3>Social</h3>
 								<ul class="icons alt">
-									<li><a href="https://www.linkedin.com/in/pranay-rahul/" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+									<li><a href="https://www.linkedin.com/in/pranay-pentaparthy/" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
 									<li><a href="https://github.com/Pranaybot" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
 							</section>
@@ -103,7 +161,7 @@
 
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>Copyright &copy; 2022 - Pranay Pentaparthy</li></ul>
+						<ul><li>Copyright &copy; <span id="current-year"></span> - Pranay Pentaparthy</li></ul>
 					</div>
 
 			</div>
@@ -116,6 +174,9 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				document.getElementById("current-year").textContent = new Date().getFullYear();
+			</script>
 
 	</body>
 
